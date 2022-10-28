@@ -12,5 +12,6 @@ namespace bART.Data.Services.Interface
     {
         Task<IReadOnlyList<Incident>> GetAllIncidentsAsync();
         Task CreateIncidentAsync (IncidentDTO incident);
+        bool IsPossible (IncidentDTO incident);
     }
 }

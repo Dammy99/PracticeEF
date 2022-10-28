@@ -1,4 +1,5 @@
-﻿using bART.Data.Entities;
+﻿using bART.Data.Dto;
+using bART.Data.Entities;
 using bART.Data.Services.Interface;
 using FluentValidation;
 using System;
@@ -9,11 +10,14 @@ using System.Threading.Tasks;
 
 namespace bART.Data.Validations
 {
-    public class IncidentValidator : AbstractValidator<Incident>
+    public class IncidentValidator : AbstractValidator<IncidentDTO>
     {
-        //public IncidentValidator(IIncidentService service)
-        //{
-        //    RuleFor(incidentik => incidentik.Accounts).NotEmpty();
-        //}
+        public IncidentValidator()
+        {
+            RuleForEach(incidentik => incidentik.Accounts).NotEmpty();
+            RuleFor(inc => inc.Description).NotEmpty().NotNull().WithMessage("Enter Data");
+            //RuleFor(incidentik => incidentik.IncidentName == )
+            RuleForEach(incidentik => incidentik.Accounts).SetValidator(new AccountValidator());
+        }
     }
 }

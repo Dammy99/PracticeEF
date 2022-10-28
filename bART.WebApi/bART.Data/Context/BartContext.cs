@@ -12,6 +12,7 @@ namespace bART.Data.Context
         public DbSet<Incident> Incidents { get; set; } = null!;
         public DbSet<Account> Accounts { get; set; } = null!;
 
+
         //public DbSet<Contact> Contacts { get; set; } = null!;
 
 

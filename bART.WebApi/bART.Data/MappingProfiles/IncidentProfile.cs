@@ -12,6 +12,8 @@ namespace bART.Data.MappingProfiles
             CreateMap<Incident, IncidentDTO>().ReverseMap();
             CreateMap<Account, AccountDTO>();
             CreateMap<Account, AccountDTO>().ReverseMap();
+            CreateMap<Account, Incident>();
+            CreateMap<Account, Incident>().ReverseMap();
         }
     }
 }

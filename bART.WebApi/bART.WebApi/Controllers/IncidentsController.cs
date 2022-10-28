@@ -25,12 +25,20 @@ namespace bART.WebApi.Controllers
             var incidents = await _incidentService.GetAllIncidentsAsync();
             return Ok(incidents);
         }
-        [HttpPost]
+        [HttpPost("createIncident")]
         public async Task<IActionResult> CreateIncident(IncidentDTO incident)
         {
-            await _incidentService.CreateIncidentAsync(incident);
-            await _context.SaveChangesAsync();
-            return Ok();
+
+            if (_incidentService.IsPossible(incident) == false)
+            {
+                return NotFound();
+            }
+            else
+            {
+                await _incidentService.CreateIncidentAsync(incident);
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
         }
     }
 }
