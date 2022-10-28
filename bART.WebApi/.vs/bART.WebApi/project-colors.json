@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1593a2a0-97db-4e8b-acd3-4234ed985459": {
+      "ProjectGuid": "1593a2a0-97db-4e8b-acd3-4234ed985459",
+      "DisplayName": "bART.WebApi",
+      "ColorIndex": 0
+    },
+    "ea8a9121-b82e-4fe3-8903-2549cd5d2a2d": {
+      "ProjectGuid": "ea8a9121-b82e-4fe3-8903-2549cd5d2a2d",
+      "DisplayName": "bART.Data",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

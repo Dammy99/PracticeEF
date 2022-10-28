@@ -1,0 +1,14 @@
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\bin\Debug\net6.0\bART.Data.deps.json
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\bin\Debug\net6.0\bART.Data.dll
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\bin\Debug\net6.0\ref\bART.Data.dll
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\bin\Debug\net6.0\bART.Data.pdb
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.csproj.AssemblyReference.cache
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.AssemblyInfoInputs.cache
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.AssemblyInfo.cs
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.csproj.CoreCompileInputs.cache
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.dll
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\ref\bART.Data.dll
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.pdb
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\bin\Debug\net6.0\bART.Data.runtimeconfig.json
+D:\GitHub Desktop\bARTTest\bART.WebApi\bART.Data\obj\Debug\net6.0\bART.Data.genruntimeconfig.cache

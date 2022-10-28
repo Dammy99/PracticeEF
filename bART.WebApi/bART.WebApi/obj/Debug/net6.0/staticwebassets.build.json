@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "841UhBypuVnrN8F0LTQnpSSb+BW+a3hENIEiXgCQWJQ=",
+  "Source": "bART.WebApi",
+  "BasePath": "_content/bART.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
