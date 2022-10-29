@@ -1,15 +1,5 @@
-﻿using bART.Data.Context;
-using bART.Data.Dto;
-using bART.Data.Entities;
-using bART.Data.Services.Interface;
+﻿using bART.Data.Dto;
 using FluentValidation;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace bART.Data.Validations
 {

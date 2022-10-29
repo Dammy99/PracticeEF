@@ -2,14 +2,6 @@
 using bART.Data.Services.Implementation;
 using bART.Data.Services.Interface;
 using Microsoft.Extensions.DependencyInjection;
-using FluentValidation;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using bART.Data.Dto;
 
 namespace bART.Data.Extentions
 {

@@ -1,7 +1,6 @@
 ﻿using bART.Data.Context;
 using bART.Data.Dto;
 using bART.Data.Services.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bART.WebApi.Controllers

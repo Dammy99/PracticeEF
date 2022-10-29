@@ -13,11 +13,6 @@ namespace bART.Data.Context
         public DbSet<Account> Accounts { get; set; } = null!;
         public DbSet<Contact> Contacts { get; set; } = null!;
 
-
-        //public DbSet<Contact> Contacts { get; set; } = null!;
-
-
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
