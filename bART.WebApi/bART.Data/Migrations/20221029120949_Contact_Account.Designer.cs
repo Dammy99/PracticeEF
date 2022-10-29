@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using bART.Data.Context;
 
@@ -10,9 +11,10 @@ using bART.Data.Context;
 namespace bART.Data.Migrations
 {
     [DbContext(typeof(BartContext))]
-    partial class BartContextModelSnapshot : ModelSnapshot
+    [Migration("20221029120949_Contact_Account")]
+    partial class Contact_Account
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

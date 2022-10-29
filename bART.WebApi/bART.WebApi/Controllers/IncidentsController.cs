@@ -25,7 +25,9 @@ namespace bART.WebApi.Controllers
             var incidents = await _incidentService.GetAllIncidentsAsync();
             return Ok(incidents);
         }
-        [HttpPost("createIncident")]
+        [HttpPost("createIncident(StepByStep)")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> CreateIncident(IncidentDTO incident)
         {
 

@@ -11,7 +11,7 @@ using bART.Data.Context;
 namespace bART.Data.Migrations
 {
     [DbContext(typeof(BartContext))]
-    [Migration("20221027225521_IncidentWithAccounts")]
+    [Migration("20221029105224_IncidentWithAccounts")]
     partial class IncidentWithAccounts
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,7 +29,6 @@ namespace bART.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IncidentName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("AccountName");
@@ -58,9 +57,7 @@ namespace bART.Data.Migrations
                 {
                     b.HasOne("bART.Data.Entities.Incident", "Incident")
                         .WithMany("Accounts")
-                        .HasForeignKey("IncidentName")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IncidentName");
 
                     b.Navigation("Incident");
                 });

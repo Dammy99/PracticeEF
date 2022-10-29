@@ -27,51 +27,37 @@ namespace bART.Data.Services.Implementation
         public async Task<IReadOnlyList<Incident>> GetAllIncidentsAsync()
         {
             var allNotes = _context.Incidents
-                .Include(x => x.Accounts);
+                .Include(x => x.Accounts).ThenInclude(y => y.Contacts);
             return await allNotes.ToListAsync();
         }
 
         public async Task CreateIncidentAsync(IncidentDTO incident)
         {
             var incidentInfo = _mapper.Map<Incident>(incident);
-
-            ////var temp = _context.Accounts.Find(oo => incidentInfo.Accounts))
-            ////if (_context.Accounts.First(us => incidentInfo!.Accounts.Any(x => x.AccountName == us.AccountName)))
-            ////{
-            ////    incidentInfo = null;
-            ////} 
-            //var www = _context.Accounts.All(x => x.AccountName == incidentInfo.Accounts.Select(a => a.AccountName).ToString());
-            ////var kkk = _context.Accounts.Where(x => x.AccountName == incidentInfo.Accounts.Where(a => a.AccountName));
-            ////var ttt = _context.Accounts.Where(x => x.AccountName == incidentInfo.Accounts.Where(y => y.AccountName);
-            //if (_context.Accounts.All(x => x.AccountName == incidentInfo.Accounts.Select(a => a.AccountName).ToString()) == false)
+            //var x = incidentInfo.Accounts.Select(x => x.AccountName);
+            //string.Join('_', x);
+            //string t = "";
+            //foreach (var item in x)
             //{
-            //    incidentInfo = null;
+            //    t += item;
             //}
-            //else
-            //{
-            //await _context.Incidents.AddRangeAsync(incidentInfo);
-            //await _context.Accounts.Remove(x=> incidentInfo.Accounts.Where());
-            
+            incidentInfo.IncidentName = string.Join('_', incidentInfo.Accounts.Select(x => x.AccountName)); 
             await _context.Incidents.AddAsync(incidentInfo);
-            //}
         }
         public bool IsPossible(IncidentDTO incident)
         {
             var incidentInfo = _mapper.Map<Incident>(incident);
 
-            var pp = _context.Accounts.Select(y => y.AccountName).AsEnumerable();
-            var tt = incidentInfo.Accounts.Select(x => x.AccountName).AsEnumerable();
+            var storedAccounts = _context.Accounts.Select(y => y.AccountName).AsEnumerable();
+            var enteredAccounts = incidentInfo.Accounts.Select(x => x.AccountName).AsEnumerable();
 
-            //var status = serial_list.Except(serial_list_printed).Any();
-            //var status = !tt.Except(pp).Any();
-
-            if (tt.Except(pp).Any() == true)
+            if (enteredAccounts.Except(storedAccounts).Any() == true)
             {
                 return  false;
             }
             else
             {
-                foreach (var t in tt)
+                foreach (var t in enteredAccounts)
                 {
                     var acInfo = new Account { AccountName = t };
                     _context.Accounts.Remove(acInfo);

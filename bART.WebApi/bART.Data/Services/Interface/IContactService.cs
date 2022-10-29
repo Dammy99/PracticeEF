@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace bART.Data.Services.Interface
 {
-    public interface IAccountService
+    public interface IContactService
     {
-        Task CreateAccountAsync(AccountDTO incident);
-        Task CreateAccountForContactAsync(ContactDTO contact);
+        Task CreateContactAsync(ContactDTO account);
     }
 }

@@ -13,9 +13,10 @@ namespace bART.Data.Configuration
         public static void Configure(EntityTypeBuilder<Account> entity)
         {
             entity.HasKey(x => x.AccountName);
-            //entity.HasMany(x => x.Contacts)
-            //    .WithOne(e => e.Account)
-            //    .HasForeignKey(y => y.AccountName);
+
+            entity.HasMany(x => x.Contacts)
+                .WithOne(e => e.Account)
+                .HasForeignKey(y => y.AccountName);
         }
     }
 }

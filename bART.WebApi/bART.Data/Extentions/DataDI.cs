@@ -23,8 +23,7 @@ namespace bART.Data.Extentions
         {
             services.AddScoped<IIncidentService, IncidentService>();
             services.AddScoped<IAccountService, AccountService>();
-            //services.AddScoped<IValidator<AccountDTO>, AccountValidator>();
-            //services.AddValidatorsFromAssemblyContaining<PersonValidator>();
+            services.AddScoped<IContactService, ContactService>();
         }
     }
 }

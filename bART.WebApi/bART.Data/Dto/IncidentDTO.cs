@@ -10,6 +10,6 @@ namespace bART.Data.Dto
     {
         public string IncidentName { get; set; } = null!;
         public string Description { get; set; } = null!;
-        public virtual ICollection<AccountDTO> Accounts { get; set; } = null!;
+        public virtual ICollection<AccountForIncidentDTO> Accounts { get; set; } = null!;
     }
 }

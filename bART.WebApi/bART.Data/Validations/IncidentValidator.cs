@@ -16,8 +16,7 @@ namespace bART.Data.Validations
         {
             RuleForEach(incidentik => incidentik.Accounts).NotEmpty();
             RuleFor(inc => inc.Description).NotEmpty().NotNull().WithMessage("Enter Data");
-            //RuleFor(incidentik => incidentik.IncidentName == )
-            RuleForEach(incidentik => incidentik.Accounts).SetValidator(new AccountValidator());
+            RuleForEach(incidentik => incidentik.Accounts).SetValidator(new AccountForIncidentValidator());
         }
     }
 }

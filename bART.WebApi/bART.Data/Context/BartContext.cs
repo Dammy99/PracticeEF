@@ -11,6 +11,7 @@ namespace bART.Data.Context
             : base(options) { }
         public DbSet<Incident> Incidents { get; set; } = null!;
         public DbSet<Account> Accounts { get; set; } = null!;
+        public DbSet<Contact> Contacts { get; set; } = null!;
 
 
         //public DbSet<Contact> Contacts { get; set; } = null!;
@@ -34,6 +35,7 @@ namespace bART.Data.Context
         {
             modelBuilder.Entity<Incident>(IncidentConfiguration.Configure);
             modelBuilder.Entity<Account>(AccountConfiguration.Configure);
+            modelBuilder.Entity<Contact>(ContactConfiguration.Configure);
         }
 
     }
